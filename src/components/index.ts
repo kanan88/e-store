@@ -5,3 +5,4 @@ export { default as CartButton } from '@/components/CartButton';
 export { default as LinksDropdown } from '@/components/LinksDropdown';
 export { default as Logo } from '@/components/Logo';
 export { default as ModeToggle } from '@/components/ModeToggle';
+export { default as ErrorElement } from '@/components/ErrorElement';
