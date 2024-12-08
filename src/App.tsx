@@ -1,5 +1,18 @@
 import { Button } from '@/components/ui/button';
-import { useAppSelector, useAppDispatch } from './hooks';
+import { useAppSelector } from './hooks';
+import {
+  HomeLayout,
+  Landing,
+  Error,
+  Products,
+  SingleProduct,
+  Cart,
+  About,
+  Register,
+  Login,
+  Checkout,
+  Orders,
+} from './pages';
 
 const App = () => {
   const { name } = useAppSelector((state) => state.userState);
@@ -15,6 +28,7 @@ const App = () => {
       >
         Cick me
       </Button>
+      <Cart />
     </div>
   );
 };
