@@ -6,6 +6,8 @@ const HomeLayout = () => {
     <>
       <Header />
       <nav>navbar</nav>
+
+      <div className="align-element py-20"></div>
       <Outlet />
     </>
   );
