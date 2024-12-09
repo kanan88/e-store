@@ -11,3 +11,7 @@ export { default as HeroCarousel } from '@/components/HeroCarousel';
 export { default as FeaturedProducts } from '@/components/FeaturedProducts';
 export { default as SectionTitle } from '@/components/SectionTitle';
 export { default as ProductsGrid } from '@/components/ProductsGrid';
+export { default as Filters } from '@/components/Filters';
+export { default as ProductsContainer } from '@/components/ProductsContainer';
+export { default as PaginationContainer } from '@/components/PaginationContainer';
+export { default as ProductsList } from '@/components/ProductsList';
