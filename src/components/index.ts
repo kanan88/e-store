@@ -15,3 +15,4 @@ export { default as Filters } from '@/components/Filters';
 export { default as ProductsContainer } from '@/components/ProductsContainer';
 export { default as PaginationContainer } from '@/components/PaginationContainer';
 export { default as ProductsList } from '@/components/ProductsList';
+export { default as Loading } from '@/components/Loading';
