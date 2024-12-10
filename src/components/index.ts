@@ -18,3 +18,4 @@ export { default as ProductsList } from '@/components/ProductsList';
 export { default as Loading } from '@/components/Loading';
 export { default as FormInput } from '@/components/FormInput';
 export { default as FormSelect } from '@/components/FormSelect';
+export { default as FormRange } from '@/components/FormRange';

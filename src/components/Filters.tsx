@@ -3,10 +3,11 @@ import { Button } from '@/components/ui/button';
 import { type ProductsResponseWithParams } from '@/utils';
 import FormInput from '@/components/FormInput';
 import FormSelect from '@/components/FormSelect';
+import FormRange from '@/components/FormRange';
 
 const Filters = () => {
   const { meta, params } = useLoaderData() as ProductsResponseWithParams;
-  const { search, company, category, shipping, order, price } = params;
+  const { search, company, category, order, price } = params;
 
   return (
     <Form className="border rounded-md px-8 py-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
@@ -38,6 +39,8 @@ const Filters = () => {
         options={['a-z', 'z-a', 'high', 'low']}
         defaultValue={order}
       />
+      {/* PRICE */}
+      <FormRange label="price" name="price" defaultValue={price} />
       <Button type="submit" size="sm" className="self-end mb-2">
         Search
       </Button>
