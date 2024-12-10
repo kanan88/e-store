@@ -19,3 +19,4 @@ export { default as Loading } from '@/components/Loading';
 export { default as FormInput } from '@/components/FormInput';
 export { default as FormSelect } from '@/components/FormSelect';
 export { default as FormRange } from '@/components/FormRange';
+export { default as FormCheckbox } from '@/components/FormCheckbox';
