@@ -1,5 +1,3 @@
-import { current } from '@reduxjs/toolkit';
-
 type ConstructUrlParams = {
   pageNumber: number;
   search: string;
