@@ -51,3 +51,8 @@ export type SingleProductResponse = {
   // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   meta: {};
 };
+
+export enum Mode {
+  SingleProduct = "singleProduct",
+  CartItem = "cartItem",
+}

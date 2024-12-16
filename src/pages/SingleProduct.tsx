@@ -9,6 +9,7 @@ import {
 
 import { Link, useLoaderData, type LoaderFunction } from "react-router-dom";
 import { SelectProductAmount, SelectProductColor } from "@/components";
+import { Mode } from "@/utils";
 
 export const loader: LoaderFunction = async ({
   params,
@@ -65,7 +66,11 @@ const SingleProduct = () => {
             setProductColor={setProductColor}
           />
           {/* AMOUNT */}
-          <SelectProductAmount />
+          <SelectProductAmount
+            mode={Mode.SingleProduct}
+            amount={amount}
+            setAmount={setAmount}
+          />
           {/* CART BUTTON */}
           <Button size="lg" className="mt-10" onClick={addToCart}>
             Add to cart

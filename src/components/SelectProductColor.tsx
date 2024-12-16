@@ -3,6 +3,7 @@ type SelectProductColorProps = {
   productColor: string;
   setProductColor: React.Dispatch<React.SetStateAction<string>>;
 };
+
 const SelectProductColor = ({
   colors,
   productColor,
