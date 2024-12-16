@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   HomeLayout,
   Landing,
@@ -11,15 +11,16 @@ import {
   Checkout,
   Orders,
   Error,
-} from '@/pages';
-import { ErrorElement } from '@/components';
+} from "@/pages";
+import { ErrorElement } from "@/components";
 
-import { loader as landingLoader } from '@/pages/Landing';
-import { loader as productsLoader } from '@/pages/Products';
+import { loader as landingLoader } from "@/pages/Landing";
+import { loader as productsLoader } from "@/pages/Products";
+import { loader as singleProductLoader } from "@/pages/SingleProduct";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <HomeLayout />,
     errorElement: <Error />,
     children: [
@@ -30,45 +31,46 @@ const router = createBrowserRouter([
         loader: landingLoader,
       },
       {
-        path: 'products',
+        path: "products",
         element: <Products />,
         errorElement: <ErrorElement />,
         loader: productsLoader,
       },
       {
-        path: 'products/:id',
+        path: "products/:id",
         element: <SingleProduct />,
         errorElement: <ErrorElement />,
+        loader: singleProductLoader,
       },
       {
-        path: 'cart',
+        path: "cart",
         element: <Cart />,
         errorElement: <ErrorElement />,
       },
       {
-        path: 'about',
+        path: "about",
         element: <About />,
         errorElement: <ErrorElement />,
       },
       {
-        path: 'checkout',
+        path: "checkout",
         element: <Checkout />,
         errorElement: <ErrorElement />,
       },
       {
-        path: 'orders',
+        path: "orders",
         element: <Orders />,
         errorElement: <ErrorElement />,
       },
     ],
   },
   {
-    path: '/login',
+    path: "/login",
     element: <Login />,
     errorElement: <Error />,
   },
   {
-    path: '/register',
+    path: "/register",
     element: <Register />,
     errorElement: <Error />,
   },

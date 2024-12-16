@@ -45,3 +45,9 @@ export type Params = {
 };
 
 export type ProductsResponseWithParams = ProductsResponse & { params: Params };
+
+export type SingleProductResponse = {
+  data: Product;
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  meta: {};
+};
