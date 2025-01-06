@@ -50,12 +50,15 @@ const cartSlice = createSlice({
       const cartItem: CartItem = state.cartItems.find(
         (i: CartItem) => i.cartID === cartID
       );
+
       if (!cartItem) return;
+
       state.cartItems = state.cartItems.filter(
         (i: CartItem) => i.cartID !== cartID
       );
       state.numItemsInCart -= cartItem.amount;
       state.cartTotal -= Number(cartItem.price) * cartItem.amount;
+
       cartSlice.caseReducers.calculateTotals(state);
 
       toast({
@@ -70,6 +73,7 @@ const cartSlice = createSlice({
       const cartItem: CartItem = state.cartItems.find(
         (i: CartItem) => i.cartID === cartID
       );
+
       if (!cartItem) return;
 
       state.numItemsInCart += amount - cartItem.amount;
@@ -77,6 +81,7 @@ const cartSlice = createSlice({
       cartItem.amount = amount;
 
       cartSlice.caseReducers.calculateTotals(state);
+
       toast({
         description: "Amount updated",
       });
