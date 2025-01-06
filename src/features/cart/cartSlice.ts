@@ -41,7 +41,10 @@ const cartSlice = createSlice({
         description: "Item added to cart",
       });
     },
-    clearCart: () => {},
+    clearCart: () => {
+      localStorage.setItem("cart", JSON.stringify(defaultState));
+      return defaultState;
+    },
     removeItem: () => {},
     editItem: () => {},
     calculateTotals: (state) => {
